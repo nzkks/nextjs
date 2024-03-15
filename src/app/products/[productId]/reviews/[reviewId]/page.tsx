@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 type ReviewDetailsType = {
   params: {
     productId: string;
@@ -6,6 +8,10 @@ type ReviewDetailsType = {
 };
 
 const ReviewDetails = ({ params }: ReviewDetailsType) => {
+  if (parseInt(params.reviewId) > 1000) {
+    notFound();
+  }
+
   return (
     <div>
       Review {params.reviewId} Details for product {params.productId}
