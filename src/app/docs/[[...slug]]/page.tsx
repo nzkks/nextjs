@@ -1,10 +1,10 @@
-export default function Docs({
-  params
-}: {
+type DocsType = {
   params: {
     slug: string[];
   };
-}) {
+};
+
+const Docs = ({ params }: DocsType) => {
   if (params.slug?.length === 2) {
     return (
       <h2>
@@ -28,4 +28,6 @@ export default function Docs({
       <div>Make sure to double the square bracket</div>
     </div>
   );
-}
+};
+
+export default Docs;
