@@ -20,9 +20,9 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>Header</header>
-        {children}
-        <footer>Footer</footer>
+        <header className="h-[100px] p-4 bg-[#89b6f1]">Header</header>
+        <main className="min-h-[300px] p-4">{children}</main>
+        <footer className="h-[100px] p-4 bg-[#d5d5d5]">Footer</footer>
       </body>
     </html>
   );
