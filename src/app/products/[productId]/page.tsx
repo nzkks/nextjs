@@ -4,9 +4,15 @@ type ProductDetailsProps = {
   params: { productId: string };
 };
 
-export const generateMetadata = ({ params }: ProductDetailsProps): Metadata => {
+export const generateMetadata = async ({ params }: ProductDetailsProps): Promise<Metadata> => {
+  const title = await new Promise(resolve => {
+    setTimeout(() => {
+      resolve(`Samsung ${params.productId}`);
+    }, 100);
+  });
+
   return {
-    title: `Prooduct ${params.productId}`
+    title: `Prooduct ${title}`
   };
 };
 
