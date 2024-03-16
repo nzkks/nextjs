@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 
 type ProductDetailsProps = {
   params: { productId: string };
