@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description: 'Product page'
 };
 
-export default function ProductDetailsLayout({
+const ProductDetailsLayout = ({
   children
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <>
       <header>Product Header</header>
@@ -23,4 +23,6 @@ export default function ProductDetailsLayout({
       </div>
     </>
   );
-}
+};
+
+export default ProductDetailsLayout;

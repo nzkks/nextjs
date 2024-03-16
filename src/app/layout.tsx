@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   description: 'Next.js app tutorial from Codevolution'
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -23,4 +23,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

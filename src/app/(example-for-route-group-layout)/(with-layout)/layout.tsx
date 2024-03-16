@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description: 'Auth page Layout'
 };
 
-export default function AuthPagesLayout({
+const AuthPagesLayout = ({
   children
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <>
       <header>Auth Header</header>
@@ -17,4 +17,6 @@ export default function AuthPagesLayout({
       <footer>Auth Footer</footer>
     </>
   );
-}
+};
+
+export default AuthPagesLayout;
