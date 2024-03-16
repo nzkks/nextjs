@@ -1,11 +1,14 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Next.js app tutorial from Codevolution',
+  title: {
+    template: '%s | Codevolution',
+    default: 'Next.js app tutorial from Codevolution'
+  },
   description: 'Next.js app tutorial from Codevolution'
 };
 
