@@ -1,13 +1,13 @@
 import { notFound } from 'next/navigation';
 
-type ReviewDetailsType = {
+type ReviewDetailsProps = {
   params: {
     productId: string;
     reviewId: string;
   };
 };
 
-const ReviewDetails = ({ params }: ReviewDetailsType) => {
+const ReviewDetails = ({ params }: ReviewDetailsProps) => {
   if (parseInt(params.reviewId) > 1000) {
     notFound();
   }

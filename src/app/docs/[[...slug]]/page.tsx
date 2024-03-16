@@ -1,10 +1,10 @@
-type DocsType = {
+type DocsProps = {
   params: {
     slug: string[];
   };
 };
 
-const Docs = ({ params }: DocsType) => {
+const Docs = ({ params }: DocsProps) => {
   if (params.slug?.length === 2) {
     return (
       <h2>
