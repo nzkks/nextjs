@@ -1,3 +1,4 @@
+import Header from '@/app/_components/header1/header';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -5,15 +6,23 @@ export const metadata: Metadata = {
   description: 'Auth page Layout'
 };
 
-const AuthPagesLayout = ({
-  children
-}: Readonly<{
+const navLinks = [
+  { name: 'Register', href: '/register1' },
+  { name: 'Login', href: '/login1' },
+  { name: 'Forgot Password', href: '/forgot-password1' }
+];
+
+interface AuthPageLayout {
   children: React.ReactNode;
-}>) => {
+}
+
+const AuthPagesLayout = ({ children }: Readonly<AuthPageLayout>) => {
   return (
     <>
-      <header>Auth Header</header>
+      <Header navLinks={navLinks} />
+
       {children}
+
       <footer>Auth Footer</footer>
     </>
   );
