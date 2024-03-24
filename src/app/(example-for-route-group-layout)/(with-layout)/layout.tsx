@@ -1,4 +1,5 @@
 import Header from '@/app/_components/header1/header';
+import TextInput from '@/app/_components/textInput-with-state/textInput';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -20,6 +21,9 @@ const AuthPagesLayout = ({ children }: Readonly<AuthPageLayout>) => {
   return (
     <>
       <Header navLinks={navLinks} />
+      <div style={{ marginBottom: '30px' }}>
+        <TextInput />
+      </div>
 
       {children}
 
